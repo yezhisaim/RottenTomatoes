@@ -17,26 +17,21 @@ class movieDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionView: UIView!
     
     @IBOutlet weak var synopsis: UILabel!
+
     
     var synopsisString = ""
     var posterURL = ""
     
-    var toPass: NSDictionary!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moviePosterView.frame = CGRectMake(0, 0, 320, 568)
         
         moviePosterView.setImageWithURL(NSURL(string: posterURL))
-        
         synopsis.text = synopsisString
-        synopsis.sizeThatFits(moviePosterView.frame.size)
-        //synopsis.sizeToFit()
+        synopsis.sizeToFit()
+        descriptionView.frame.size.height = synopsis.frame.size.height + synopsis.frame.origin.y
+        movieScrollView.contentSize = CGSize(width:320, height: synopsis.frame.size.height + synopsis.frame.origin.y)
         
-        movieScrollView.contentSize = CGSize(width:10, height:10)
-
-     //   animateImage()
     }
     
 

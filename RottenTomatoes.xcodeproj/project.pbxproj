@@ -15,6 +15,8 @@
 		BA0E610519C52ED2005B1978 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0E610419C52ED2005B1978 /* Images.xcassets */; };
 		BA0E610819C52ED2005B1978 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0E610619C52ED2005B1978 /* LaunchScreen.xib */; };
 		BA0E611419C52ED2005B1978 /* RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0E611319C52ED2005B1978 /* RottenTomatoesTests.swift */; };
+		BA8F750519C8344300A08EB3 /* sample-1055-ticket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8F750419C8344300A08EB3 /* sample-1055-ticket@2x.png */; };
+		BA8F750719C8376F00A08EB3 /* dvd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8F750619C8376F00A08EB3 /* dvd@2x.png */; };
 		BAC2451C19C64E11000CFEFF /* movieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC2451B19C64E11000CFEFF /* movieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		BA0E610D19C52ED2005B1978 /* RottenTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0E611219C52ED2005B1978 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA0E611319C52ED2005B1978 /* RottenTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenTomatoesTests.swift; sourceTree = "<group>"; };
+		BA8F750419C8344300A08EB3 /* sample-1055-ticket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sample-1055-ticket@2x.png"; path = "Images.xcassets/sample-1055-ticket@2x.png"; sourceTree = "<group>"; };
+		BA8F750619C8376F00A08EB3 /* dvd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dvd@2x.png"; path = "Images.xcassets/dvd@2x.png"; sourceTree = "<group>"; };
 		BAC2451B19C64E11000CFEFF /* movieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				BA0E60FD19C52ED2005B1978 /* AppDelegate.swift */,
 				BA0E610119C52ED2005B1978 /* Main.storyboard */,
 				BA0E610419C52ED2005B1978 /* Images.xcassets */,
+				BA8F750619C8376F00A08EB3 /* dvd@2x.png */,
+				BA8F750419C8344300A08EB3 /* sample-1055-ticket@2x.png */,
 				BA0E610619C52ED2005B1978 /* LaunchScreen.xib */,
 				BA0E60FB19C52ED2005B1978 /* Supporting Files */,
 				BA0A707519C63BD700154B0C /* RottenTomatoes-Bridging-Header.h */,
@@ -216,7 +222,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8F750719C8376F00A08EB3 /* dvd@2x.png in Resources */,
 				BA0E610319C52ED2005B1978 /* Main.storyboard in Resources */,
+				BA8F750519C8344300A08EB3 /* sample-1055-ticket@2x.png in Resources */,
 				BA0E610819C52ED2005B1978 /* LaunchScreen.xib in Resources */,
 				BA0E610519C52ED2005B1978 /* Images.xcassets in Resources */,
 			);

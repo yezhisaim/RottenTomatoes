@@ -45,6 +45,11 @@ class MoviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         progressHUD.labelText = "Fetching movies..."
         progressHUD.show(true)
         
+        //Customize navigation controller
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        let titleColor: NSDictionary = [NSForegroundColorAttributeName: UIColor.redColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = titleColor
+        
         //Fetch movies 
         var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=ghb9emfcnbxfrmrdksmk95sq&limit=20&country=us"
         
@@ -63,6 +68,7 @@ class MoviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.searchBar.hidden = false
             var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
             self.movies = object["movies"] as [NSDictionary]
+            
             self.moviesTableView.reloadData()
         }
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
@@ -94,7 +100,10 @@ class MoviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         var posters = movie["posters"] as NSDictionary
         var posterURL = posters["original"] as String
-        cell.movieView.setImageWithURL(NSURL(string: posterURL))
+        
+        var originalUrl = posterURL.stringByReplacingOccurrencesOfString("tmb", withString: "pro", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        cell.movieView.setImageWithURL(NSURL(string: originalUrl))
         
         return cell
 
@@ -122,12 +131,13 @@ class MoviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             var synopsis = movie["synopsis"] as? String
             var posters = movie["posters"] as NSDictionary
             var posterURL = posters["original"] as String
+            var originalUrl = posterURL.stringByReplacingOccurrencesOfString("tmb", withString: "det", options: NSStringCompareOptions.LiteralSearch, range: nil)
 
             if(segue.identifier == "tableCellSegue"){
                 
             var mdvc = segue.destinationViewController as movieDetailsViewController;
                 mdvc.navigationItem.title = title
-                mdvc.posterURL = posterURL
+                mdvc.posterURL = originalUrl
                 mdvc.synopsisString = synopsis!
                 
             
