@@ -16,6 +16,8 @@ DONE: Add a search bar. (optional)
 
 
 Walkthrough of all user stories
+
+
 ![alt tag](https://raw.githubusercontent.com/yezhisaim/RottenTomatoes/master/RottenTomatoes/Images.xcassets/RottenTomatoes.gif)
 
 
